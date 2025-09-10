@@ -1,0 +1,546 @@
+/* File Name: Style.CSS
+   Author:  
+            SKY
+   Created: 1 September 2024
+   Last Modified: 18 September 2024
+   Description: HyperNet Css File
+*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background:#f5f0d9;
+}
+
+ hr {
+	border: solid 0.5px white;
+ }
+ 
+/* Header */
+header {
+    background: #db9f92 ;
+    color: #683131;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    display:inline-flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 3%;
+    margin: 0;
+    font-size: 3.5em;
+    color:#683131;
+}
+
+h1 a {
+    color: #683131;
+    text-decoration: none;
+}
+
+.logo {
+    margin-right:5px;
+    width:55px;
+    height:55px;
+    transition: transform 0.3s ease-in-out;
+	vertical-align: baseline;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+} 
+
+.video {
+    height:90px;
+    float:right;
+    padding-right:70px;
+}
+
+/* Navigation */
+nav {
+    text-align:center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #a16675;
+    text-decoration: solid;
+}
+
+/* Main Content */
+main {
+    padding: 40px 45px 45px 45px;
+    width: 80%;
+	max-width: 95%;
+    margin: 20px auto;
+    background: #f8acb9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color:#2A33D5;
+    animation: slideIn 1s ease-out;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2.5em;
+    font-variant: normal;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    border-top: 5px solid #ae78fa;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer a {
+    color: #50e3c2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/*Contact Us Button*/
+button.contact{
+    background-color: #6905F5;
+	border: none;
+	border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.contact a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+button.contact:hover {
+	background: #6905F5;
+    transform: scale(1.05);
+	cursor: pointer;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+/*Back to Portfolio Button*/
+button.back-to-portfolio{
+    background-color: #6905F5;
+	border: none;
+	border-radius: 10px;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.back-to-portfolio a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+button.back-to-portfolio:hover {
+	background: #6905F5;
+    transform: scale(1.05);
+	cursor: pointer;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+/* Index Page Specific Styles */
+.index-background {
+    height: 300px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	/* Popping animation for welcome message*/
+    animation:pop 2s ease-in-out 1s infinite;
+}
+
+.indexh2 {
+	font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    color: 8737F6;
+}
+
+ol {
+    padding-left: 15px;
+}
+
+#job-description {
+    color: 001F99;
+}
+
+
+/* Jobs Page Specific Styles */
+aside {
+    float: right;
+    width: 30%;
+    margin-left: 20px;
+    padding: 15px;
+    border: 10px solid #8eebf1;
+    background: #a3eef3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+	font-size: 1vw;
+}
+
+aside h3 {
+    margin-top: 0;
+    color:#0B689D;
+}
+
+ol, ul {
+    margin: 10px 0;
+}
+
+.jobsdl {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 40px 20px 40px;
+    border: 1px solid transparent;
+    background: #fcb6c2;
+    border-radius: 20px;
+}
+
+.jobsdl dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.jobsdl dd {
+    margin: 0 0 10px 15px;
+}
+
+.jobsdl dt, .jobsdl dd {
+    flex: 1;
+    min-width: 200px;
+}
+
+
+/* Apply Page Specific Styles */
+form {
+    background:#fabac5;
+    padding: 20px;
+    border: 1px solid #fabac5;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 3px solid#f8bec8;
+    border-radius: 5px;
+    background-color: #fcc8d1;
+    padding: 0 0 10px 15px;
+    margin: 10px 17px 8px 0px
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"], select, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #f5c5cd;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #f5c5cd;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+    border-color: #ae78fa;
+}
+
+input[type="submit"], input[type="reset"] {
+    background: #6905F5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background: #8d60cc;
+    transform: scale(1.05);
+}
+
+/* About Page Specific Styles */
+.aboutinfo {
+    display:flow-root;
+    margin: auto ;
+    padding: 20px;
+    border: 1px solid transparent;
+    background: #fcb6c2;
+    border-radius: 20px;
+}
+
+.aboutinfo dt {
+    width: 150px; /*common width*/
+    font-weight: bold;
+    margin-right: 5px;
+    float: left;
+}
+
+.aboutinfo dd {
+    width: 550px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+figure {
+    float: right; /* figure float to the right of definition */
+    margin-right: 10px;
+    padding: 5px;
+    border: 3px solid #4a90e2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 2s ease-in-out;
+
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    flex-direction: row-reverse;
+}
+
+.info {
+    flex: 1;
+    padding: 20px;
+}
+
+.info a {
+    color: #333;
+    
+}
+
+.photo {
+    width: 200px;
+    height: 300px;
+    border-radius: 3%;
+    object-fit: cover;
+    margin: 0 20px;
+    border: 4px solid #fcb6c2;
+    float: right;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.music-icon {
+    animation: rotate 2s linear infinite;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    animation: fadeIn 2s ease-in-out;
+}
+
+table, th, td {
+    border: 1px solid #f1faf4;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #6bf7f0;
+    font-weight: bold;
+}
+
+td {
+    background: #9df5ee;
+}
+
+.location-photo {
+    width: 300px;
+    height: 200px;
+    border-radius: 3%;
+    object-fit: cover;
+    margin: 0 20px;
+    border: 4px solid #fcb6c2;
+    float: left;
+}
+
+/* Enhancements Page Specific Styles */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.ss {
+	border: solid 1px grey;
+	border-radius: 10px;
+	margin: 10px 10px 10px 10px;
+	max-width: 60%;
+}
+
+#refer {font-size: 10px;}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

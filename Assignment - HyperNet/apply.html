@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author"      	content="Sky">
+    <meta name="description" 	content="Job Application Form - HyperNet Inc.">
+    <meta name="viewport" 		content="width=device-width, initial-scale=1.0">
+    <title>Job Applications - HyperNet Inc.</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="images/logo.png" alt="HyperNet logo" class="logo">HyperNet Inc.</a></h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="home page">Home</a></li>
+                <li><a href="jobs.html" title="jobs description">Jobs</a></li>
+                <li><a href="apply.html" title="job application form">Apply</a></li>
+                <li><a href="about.html" title="about us">About</a></li>
+                <li><a href="enhancements.html" title="enhancement">Enhancements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+			<h1>Job Application</h1>
+
+            <h2>This form is no longer working to prevent spam. Form action has been removed</h2>
+            <form action="" method="post">
+                <label for="jobRef">Job Reference Number:</label>
+                <input type="text" id="jobRef" name="JobReference" pattern="[a-zA-Z0-9]{5}" required>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="FirstName" maxlength="20" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="LastName" maxlength="20" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="DateOfBirth" min="1980-01-01" max="2005-12-31" required>
+
+                <fieldset>
+                    <legend><strong>Gender:</strong></legend>
+                    <label for="male">
+                        <input type="radio" id="male" name="Gender" value="Male" required> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="Gender" value="Female"> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" id="other" name="Gender" value="Other"> Other
+                    </label>
+                </fieldset>
+
+                <label for="address">Street Address:</label>
+                <input type="text" id="address" name="Address" maxlength="40" required>
+
+                <label for="suburb">Suburb/Town:</label>
+                <input type="text" id="suburb" name="Suburb" maxlength="40" required>
+
+                <label for="state">State:</label>
+                <select id="state" name="State" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="Postcode" pattern="\d{4}" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="Email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone" pattern="[0-9\s]{8,12}" required>
+
+                <label for="skills">Skills:</label>
+                <label><input type="checkbox" name="Skills" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="Skills" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="Skills" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="Skills" value="Other"> Other skills...</label>
+                
+                <label for="otherSkills">If Other, specify:</label>
+                <textarea id="otherSkills" name="OtherSkills"></textarea>
+
+                <input type="submit" value="Apply" title="submit the form">
+                <input type="reset" value="Reset" title="reset the form">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HyperNet Inc.</p>
+        <p>Contact us at: <a class="email-link" href="mailto:skylc.work@gmail.com">skylc.work@gmail.com</a></p>
+    </footer>
+
+    <button class="contact"><a href="mailto:skylc.work@gmail.com">Contact us</a></button>
+</body>
+</html>
