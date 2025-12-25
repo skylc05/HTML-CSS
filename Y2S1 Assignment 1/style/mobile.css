@@ -1,0 +1,355 @@
+/* ---------------------------
+   Mobile Stylesheet (<=767px)
+   Author: Sky
+   --------------------------- */
+
+/* CSS Reset (minimal) - Basic styling reset for consistent cross-browser rendering */
+* { 
+    box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Skip link - Accessibility feature for screen readers to jump to main content */
+.skip-link { 
+  position: absolute; 
+  left: -9999px; }
+
+/* Skip link becomes visible when focused for keyboard navigation */
+.skip-link:focus { 
+  left: 12px; 
+  top: 12px; 
+  background: #fff; 
+  padding: 8px 10px; 
+  border-radius: 6px; 
+}
+
+/* Header - Sticky dark gradient header with shadow for mobile */
+header { 
+  background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+  color: #fff; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Header container - Vertical layout for mobile navigation */
+header .container { 
+  padding: 14px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Logo - Personal branding with mobile-optimized sizing */
+.logo { 
+  font-weight: 700; 
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* Navigation - Horizontal scrolling navigation for mobile with pill-style buttons */
+nav ul { 
+  list-style: none; 
+  margin: 6px 0 0; 
+  padding: 0; 
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+/* Hide scrollbar for cleaner look */
+nav ul::-webkit-scrollbar {
+   display: none; 
+}
+
+nav li { 
+  display: inline-block;
+  margin: 0; 
+  scroll-snap-align: start;
+}
+
+/* Pill-style navigation buttons for mobile */
+nav a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 14px; 
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: inline-block;
+}
+
+/* Active and hover states for navigation */
+nav a.active, nav a:focus, nav a:hover {
+  background: #ff6a00;
+  border-color: transparent;
+}
+
+/* Demo nav container - Used in animations page demo */
+.demo-nav {
+  background: #121212;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Main content - Mobile-optimized padding */
+main { 
+  padding: 14px; 
+}
+
+/* Cards/sections - Mobile-optimized card layout with smaller padding */
+section, article { 
+  background: #fff; 
+  border-radius: 10px; 
+  padding: 14px; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06); 
+  margin-bottom: 14px; 
+}
+
+/* Section titles and headings (mobile version) */
+.section-title {
+  margin-bottom: 16px;
+}
+
+/* Images - Responsive images with rounded corners for mobile */
+img { 
+  width: 100%; 
+  border-radius: 10px; 
+  display: block; 
+}
+
+/* Image styling - Various image types across the site (mobile version) */
+.cert {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.kl {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Tables - Mobile-optimized table styling with smaller padding */
+table {
+  width: 100%; 
+  border-collapse: collapse;
+}
+
+th, td { 
+  padding: 8px; 
+  border: 1px solid #ddd; 
+  text-align: center; 
+}
+
+thead th { 
+  background: #1f1f1f; 
+  color: #fff; 
+}
+
+/* Buttons - Mobile-optimized button styling with touch-friendly interactions */
+button, input[type="submit"] { 
+  background: #ff6a00; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 16px; 
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease; 
+}
+
+/* Interactive button states for mobile */
+button:hover, input[type="submit"]:hover { 
+  box-shadow: 0 6px 16px rgba(255,106,0,0.35); 
+}
+
+button:active, input[type="submit"]:active { 
+  transform: translateY(1px); 
+}
+
+/* Forms - Mobile-optimized form styling with touch-friendly inputs */
+form label { 
+  display: inline-block; 
+  margin: 8px 0 4px; 
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea { 
+  width: 100%; 
+  padding: 10px 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  font: inherit; 
+}
+
+/* Focus states for accessibility and user feedback */
+input:focus, select:focus, textarea:focus { 
+  outline: 3px solid #cde6ff; 
+  border-color: #7bb5ff; 
+}
+
+.form-actions { 
+  margin-top: 12px; 
+}
+
+/* Aside - Sidebar content styling (mobile) */
+aside {
+  background: #f8f9fa;
+  border-left: 4px solid #ff6a00;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+aside h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+aside p {
+  margin-bottom: 0;
+  color: #444;
+}
+
+/* Footer - Dark theme footer with centered text */
+footer {
+  background: #121212;
+  color: #fff;
+  padding: 18px 20px;
+  text-align: center;
+}
+
+/* Animations - Keyframe animations for page elements (mobile version) */
+@keyframes fadeIn { 
+  from { 
+    opacity: 0; 
+    transform: translateY(10px);
+  } 
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  } 
+}
+
+@keyframes slideIn { 
+  from { 
+    opacity: 0; 
+    transform: translateX(-10px);
+  } 
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+
+/* Skill section - Animated horizontal scrolling skills ticker (mobile version) */
+.skill-list {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.skills-container {
+  width: max-content;
+  display: flex;
+  gap: 1rem;
+  animation: loop 20s linear infinite;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.177);
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  white-space: nowrap;
+}
+
+/* Loop animation for continuous horizontal scrolling */
+@keyframes loop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.5rem)); }
+}
+
+/* Demo image sizing for animations page */
+.demo-image {
+    max-width: 260px;
+}
+
+/* Certificate image sizing for achievements page */
+.certificate-image {
+    width: 50%;
+}
+
+/* Favorites Grid Layout - Mobile-optimized grid layout for organizing favorite categories */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.favorite-category {
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #ff6a00;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.favorite-category h3 {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.favorite-category ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.favorite-category li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.favorite-category li strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.favorite-category a {
+    color: #ff6a00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.favorite-category a:hover {
+    text-decoration: underline;
+}

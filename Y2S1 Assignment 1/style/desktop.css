@@ -1,0 +1,405 @@
+/* ---------------------------
+   Desktop Stylesheet (>=768px)
+   Author: 
+    Sky
+   --------------------------- */
+
+/* CSS Reset (minimal) - Basic styling reset for consistent cross-browser rendering */
+* { 
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Skip link - Accessibility feature for screen readers to jump to main content */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Skip link becomes visible when focused for keyboard navigation */
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    background: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Header and navigation - Dark theme header with animated navigation links */
+header {
+    background: #121212;
+    color: #fff;
+}
+header .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 18px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 2px;
+    position: relative;
+}
+/* Animated underline - Creates expanding underline effect on hover/focus/active */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #ff6a00;
+    transition: width 0.35s ease;
+}
+
+nav a:hover::after, nav a:focus::after, nav a.active::after {
+    width: 100%;
+}
+
+/* Demo nav container (for visibility in examples) - Used in animations page demo */
+.demo-nav {
+    background: #121212;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Main content - Centered content area with consistent padding */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 20px 48px;
+}
+
+/* Hero section - Two-column layout with animations */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+.hero h1, .hero h2 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+    animation: slideIn 700ms ease both;
+}
+.subtitle {
+    color: #333;
+    margin: 0 0 16px;
+}
+.photo, .profile {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    animation: fadeIn 900ms ease both;
+}
+
+/* Image styling - Various image types across the site */
+.cert {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.kl {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* Cards/sections - Card-style layout for content sections */
+section, article {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+/* Section titles and headings */
+.section-title {
+    margin-bottom: 20px;
+}
+
+/* Skill section - Animated horizontal scrolling skills ticker */
+.skill-list {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.skills-container {
+    width: max-content;
+    display: flex;
+    gap: 1rem;
+    animation: loop 20s linear infinite;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.177);
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    white-space: nowrap;
+}
+
+/* Loop animation for continuous horizontal scrolling */
+@keyframes loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.5rem)); }
+}
+
+/* Forms - Contact form styling with focus states and hover effects */
+form label { 
+    display: inline-block; 
+    margin: 8px 0 4px; 
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Focus states for accessibility and user feedback */
+input:focus, select:focus, textarea:focus {
+    outline: 3px solid #cde6ff;
+    border-color: #7bb5ff;
+}
+
+.form-actions {
+    margin-top: 12px;
+}
+
+button, input[type="submit"] {
+    background: #ff6a00;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Interactive button states */
+button:hover, input[type="submit"]:hover { 
+    box-shadow: 0 6px 16px rgba(255,106,0,0.35); 
+}
+
+button:active, input[type="submit"]:active { 
+    transform: translateY(1px); 
+}
+
+/* Tables - Timetable styling with alternating row colors and rounded corners */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+caption { 
+    text-align: left; 
+    font-weight: 600;
+    margin-bottom: 8px; 
+}
+
+th, td { 
+    padding: 10px; 
+    text-align: center; 
+}
+
+thead th {
+    background: #1f1f1f;
+    color: #fff;
+}
+
+/* Alternating row colors for better readability */
+tbody tr:nth-child(odd) { 
+    background: #f6f6f6; 
+}
+
+tbody tr:nth-child(even) { 
+    background: #ffffff; 
+}
+
+tbody td, thead th { 
+    border: 1px solid #ddd; 
+}
+
+/* Aside - Sidebar content styling */
+aside {
+    background: #f8f9fa;
+    border-left: 4px solid #ff6a00;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+aside p {
+    margin-bottom: 0;
+    color: #444;
+}
+
+/* Footer - Dark theme footer with centered text */
+footer {
+    background: #121212;
+    color: #fff;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+/* Animations - Keyframe animations for page elements */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0; 
+        transform: translateX(-10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+/* Utilities - Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px; 
+    height: 1px;
+    padding: 0; 
+    margin: -1px;
+    overflow: hidden; 
+    clip: rect(0,0,0,0);
+    white-space: nowrap; 
+    border: 0;
+}
+
+/* Demo image sizing for animations page */
+.demo-image {
+    max-width: 260px;
+}
+
+/* Certificate image sizing for achievements page */
+.certificate-image {
+    width: 50%;
+}
+
+/* Favorites Grid Layout - Grid layout for organizing favorite categories */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.favorite-category {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ff6a00;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.favorite-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.favorite-category h3 {
+    margin: 0 0 16px 0;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.favorite-category ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.favorite-category li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.favorite-category li strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.favorite-category a {
+    color: #ff6a00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.favorite-category a:hover {
+    text-decoration: underline;
+}
+
+

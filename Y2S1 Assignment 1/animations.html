@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS animations used in the site">
+  <meta name="author" content="Sky">
+  <title>Animations | Sky</title>
+  <link rel="stylesheet" href="style/desktop.css" media="screen and (min-width:768px)">
+  <link rel="stylesheet" href="style/mobile.css" media="screen and (max-width:767px)">
+  <!-- Font Awesome icons for skill icons and UI elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Accessibility: Skip link for screen readers to jump to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="logo">COS10005 - Assignment 1</div>
+      <!-- Main navigation menu -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hometown.html">Hometown</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="animations.html" class="active">Animations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <section>
+      <h1>Animations used on this site</h1>
+      <p>
+        This page explains and demonstrates the CSS animations used across the website. Each demo below is a
+        minimal example of the exact animation used elsewhere, with a short note on where you can see it live.
+      </p>
+    </section>
+
+    <!-- Demo section 1: Navigation underline animation -->
+    <section>
+      <h2>1) Navigation link underline</h2>
+      <p>
+        The navigation links have an animated underline that expands from left to right on hover/focus or when the
+        link is active. This is implemented in the header using a pseudo-element with a width transition.
+      </p>
+      <!-- Demo navigation with animated underline effect -->
+      <nav class="demo-nav">
+        <ul>
+          <li><a href="#">Hover me</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Demo section 2: Heading slide-in animation -->
+    <section>
+      <h2>2) Heading slide-in</h2>
+      <p>
+        Hero headings slide in from the left and fade in on load using the <code>slideIn</code> keyframes defined in the stylesheet.
+        Example below uses the same structure as the Home page hero.
+      </p>
+      <!-- Demo hero section with slide-in animation -->
+      <section class="hero">
+        <div>
+          <h2>Demo hero heading</h2>
+          <p class="subtitle">Uses <code>@keyframes slideIn</code> from the CSS</p>
+        </div>
+        <div></div>
+      </section>
+    </section>
+
+    <!-- Demo section 3: Image fade-in animation -->
+    <section>
+      <h2>3) Image/content fade-in</h2>
+      <p>
+        Images and certain blocks fade in and move up slightly using the <code>fadeIn</code> keyframes defined in the stylesheet.
+        The demo below uses the same <code>.profile</code> class that fades in on load.
+      </p>
+      <!-- Demo image with fade-in animation -->
+      <img src="images/Sky.jpg" alt="Demo image fade-in" class="profile demo-image">
+    </section>
+
+    <!-- Demo section 4: Scrolling skills ticker animation -->
+    <section>
+      <h2>4) Scrolling skills ticker</h2>
+      <p>
+        The skills list on the Home page scrolls horizontally in a loop using the <code>loop</code> keyframes.
+        This demo reuses the exact same structure and classes.
+      </p>
+      <!-- Demo skills container with horizontal scrolling animation -->
+      <!-- Animation technique: Duplicate content creates seamless infinite loop -->
+      <div class="skill-list">
+        <div class="skills-container">
+          <!-- Programming skills with Font Awesome icons for scrolling demo -->
+          <!-- First set of skills for initial display -->
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+          <div class="skill"><i class="fab fa-microsoft"></i> C#</div>
+          <div class="skill"><i class="fas fa-code"></i> C++</div>
+          <div class="skill"><i class="fas fa-gem"></i> Ruby</div>
+          <!-- Duplicated skills for seamless looping animation -->
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+          <div class="skill"><i class="fab fa-microsoft"></i> C#</div>
+          <div class="skill"><i class="fas fa-code"></i> C++</div>
+          <div class="skill"><i class="fas fa-gem"></i> Ruby</div>
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+          <div class="skill"><i class="fab fa-microsoft"></i> C#</div>
+          <div class="skill"><i class="fas fa-code"></i> C++</div>
+          <div class="skill"><i class="fas fa-gem"></i> Ruby</div>
+          <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+          <div class="skill"><i class="fab fa-microsoft"></i> C#</div>
+          <div class="skill"><i class="fas fa-code"></i> C++</div>
+          <div class="skill"><i class="fas fa-gem"></i> Ruby</div>
+      </div>
+      </div>
+      <!-- Accessibility note for screen readers -->
+      <!-- Animations are purely decorative and don't affect content accessibility -->
+      <p class="sr-only">Note: Animations are decorative and do not convey essential information.</p>
+    </section>
+  </main>
+
+  <!-- Site footer with copyright and student information -->
+  <footer>
+      <p>&copy; 2025 
+      
+      
+      </p>
+  </footer>
+</body>
+</html>

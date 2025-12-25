@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sky - COS10005 Assignment 1">
+  <meta name="author" content="
+        
+        
+        
+        
+        ">
+  <title>Contact | Sky</title>
+  <link rel="stylesheet" href="style/desktop.css" media="screen and (min-width:768px)">
+  <link rel="stylesheet" href="style/mobile.css" media="screen and (max-width:767px)">
+</head>
+
+<body>
+  <!-- Accessibility: Skip link for screen readers to jump to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <div class="logo">COS10005 - Assignment 1</div>
+      <!-- Main navigation menu -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hometown.html">Hometown</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="animations.html">Animations</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+      <section>
+          <h2 id="contact-heading">Contact Me</h2>
+          <!-- Contact form with server-side processing and validation -->
+          <h2>This form is no longer working to prevent spam. Form action has been removed</h2>
+          <!-- Full name input with pattern validation -->
+          <!-- Pattern ensures only letters and spaces, prevents injection attacks -->
+          <div>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required aria-required="true" minlength="2" maxlength="60" pattern="[A-Za-z ]{1,59}" title="Use letters and spaces.">
+          </div>
+          <!-- Email input with built-in email validation -->
+          <!-- HTML5 email type provides client-side validation -->
+          <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required aria-required="true">
+          </div>
+          <!-- Phone input with pattern validation for international formats -->
+          <!-- Supports various international phone number formats -->
+          <div>
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" inputmode="tel" pattern="[0-9\-\+\s]{7,20}" title="Digits, spaces, + or - only.">
+          </div>
+          <!-- Topic selection dropdown -->
+          <!-- Required field to categorize inquiries for better response handling -->
+          <div>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required aria-required="true">
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="general">General enquiry</option>
+                  <option value="project">Project discussion</option>
+                  <option value="feedback">Site feedback</option>
+              </select>
+          </div>
+          <!-- Message textarea with character limit -->
+          <!-- Character limit prevents spam and ensures manageable message length -->
+          <div>
+              <label for="msg">Message</label>
+              <textarea id="msg" name="msg" rows="5" maxlength="500" required aria-required="true"></textarea>
+              <!-- Screen reader only help text for character limit -->
+              <div id="msg-help" class="sr-only">Maximum 500 characters</div>
+          </div>
+          <!-- Form submission button -->
+          <!-- Submit button triggers form validation and data transmission -->
+          <div class="form-actions">
+              <input type="submit" value="Send">
+          </div>
+          </form>
+      </section>
+  </main>
+
+  <!-- Site footer with copyright and student information -->
+  <footer>
+    <p>&copy; 2025 Sky</p>
+  </footer>
+</body>
+</html>
